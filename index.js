@@ -1,4 +1,7 @@
+import createCharacterCard from "./components/card/card.js";
+
 const cardContainer = document.querySelector('[data-js="card-container"]');
+const characterCards = createCharacterCard();
 const searchBarContainer = document.querySelector(
   '[data-js="search-bar-container"]'
 );
@@ -7,6 +10,10 @@ const navigation = document.querySelector('[data-js="navigation"]');
 const prevButton = document.querySelector('[data-js="button-prev"]');
 const nextButton = document.querySelector('[data-js="button-next"]');
 const pagination = document.querySelector('[data-js="pagination"]');
+
+console.log("CardContainer: ", characterCards);
+
+cardContainer.append(characterCards);
 
 // States
 const maxPage = 1;
